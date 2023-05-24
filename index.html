@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Rufus: Research Assistant</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="app-header">
+  <h1>Research Assistant!</h1>
+  <h2>La app de Rufus que hace el trabajo de investigacion aburrido y duro por ti. Genera informes completos sobre tu empresa, investiga competidores, define tono de voz y avatares, y analiza a tu audiencia. Todo de manera divertida y fácil. ¡Adiós horas de investigación aburrida! 🎉🇦🇷</h2>
+  </p>
+     <div class="app-tags">
+      <span class="tag">⭐ Marketing</span>
+      <span class="tag">🌐 Social Media</span>
+      <span class="tag">📣 Content Creation</span>
+      <span class="tag">🚀 Campaigns</span>
+      <span class="tag">🔍 SEO</span>
+    </div>
+        <div class="metrics-info">
+      <span class="metric">84</span>
+      <span class="metric-label">Total uses</span>
+      <span class="metric">1</span>
+      <span class="metric-label">Saved</span>
+      <span class="metric">2 days ago</span>
+    </div>
+  </div>
+</div>
+  
+</div>
+
+<div class="container">
+  <div class="prompt">
+    <h2>Prompt:</h2>
+    <div id="promptText"></div>
+  </div>
+  <div class="form-container">
+    <h1>Edit tags</h1>
+    <form id="inputForm">
+      <div class="form-group">
+        <label for="input1">Client Name:</label>
+        <input type="text" id="input1" name="input1" data-hint="Enter the complete name of the client. Example: Cerveza Imperial Argentina not only Imperial" />
+        <div class="hint-box"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="input2">Client's Context:</label>
+        <input type="text" id="input2" name="input2" data-hint="Provide all relevant context for the research analysis" />
+        <div class="hint-box"></div>
+      </div>
+
+      <button type="submit">Generate Prompt</button>
+    </form>
+  </div>
+</div>
+
+<button id="copyButton">Copy Prompt</button>
+<button id="editButton">Edit Prompt</button>
+<button id="copyInputsButton">Copy Inputs as JSON</button>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
