@@ -39,15 +39,35 @@ function hideHint(input) {
 function updateOutput() {
   const input1 = document.getElementById('input1').value;
   const input2 = document.getElementById('input2').value;
+  const input3 = document.getElementById('input3').value;
+  const input4 = document.getElementById('input4').value;
 
-  const output = `Genera un informe para la empresa ${input1} completo con información acerca de sus productos, historia, objetivos de negocio, descripción de la audiencia, creación de Avatars, tono de voz, social listening, competidores. Automatizacion del proceso de investigacion del cliente y marca: analisis exhaustivo de audiencia, producto, competencia y necesidades a nivel paid social.
-  Para obtener un extra de benchmarking, por favor, indícame si deseas la lista de los principales competidores de la empresa, en qué plataformas pautan contenido, cuál es su propuesta de valor, cuál es el diferencial respecto a la propuesta de valor de nuestro cliente y qué mensajes lleva a su audiencia.
-  Contexto de la empresa: ${input2}`;
+  const output = `Genera un informe completo para la empresa ${input1} ${input2} completo que detalle:
+
+1) Introduccion a la empresa, a que se dedican y cual es el contexto del negocio
+
+con información acerca de:
+
+2)Descripción de la audiencia y distintos buyer/user personas. Especificar Sexo, Edad, nivel socioeconomico, ubicacion geografica, intereses, caracteristicas de su comportamiento y psicograficas
+
+3) Explicar cual es la propuesta de valor de la empresa
+
+productos
+
+4) Descripcion de su producto/productos/servicios. Especificar taglines, features del mismo, y beneficios
+
+5) Analisis de la competencia para el pais en el que se encuentran y porque esas empresas son competencia. Hacer lista de nombres de empresas que sean competencia
+
+6) Que diferencia a la empresa ${input1} de la competencia
+
+7) Cual sería un tono de voz acorde a la audiencia objetivo?
+
+Generar el informe utilizando tu base de datos propia y complementar con la siguiente informacion: ${input3} ${input4}`;
 
   outputText.innerHTML = output;
 
   // Reset all input classes
-  const inputs = document.querySelectorAll('input');
+  const inputs = document.querySelectorAll('input, textarea');
   inputs.forEach(function(input) {
     input.classList.remove('filled');
   });
@@ -79,7 +99,7 @@ function updateOutput() {
 }
 
 // Event listeners for input fields
-const inputs = document.querySelectorAll('input');
+const inputs = document.querySelectorAll('input, textarea');
 inputs.forEach(function(input) {
   input.addEventListener('input', function() {
     updateOutput();
